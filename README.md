@@ -14,6 +14,20 @@ get the key points in seconds.
 - 📊 Shows page count, word count, and reduction percentage
 - 🖱️ Clean web interface with drag-and-drop upload
 
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Choose Summary Length & Language
+![Options](screenshots/options.png)
+
+### Summary with Highlighted Keywords
+![Summary](screenshots/summary.png)
+
+### Translated Summary
+![Translation](screenshots/translation.png)
+
 ## 🛠️ Tech Stack
 
 | Purpose | Technology |
@@ -27,18 +41,33 @@ get the key points in seconds.
 | Frontend | HTML, CSS, JavaScript |
 
 ## ⚙️ How It Works
+
+```
 Upload File → Text Extraction → Preprocessing → TF-IDF Sentence Scoring
 → Select Top Sentences → Highlight Keywords → (Optional) Translate → Display
-
+```
 
 ## 🚀 How to Run
 
 1. Clone the repository
-2.  Create and activate a virtual environment
+```
+   git clone https://github.com/sahilbhosale10/DocuBrief.git
+   cd DocuBrief
+```
+2. Create and activate a virtual environment
+```
+   python -m venv venv
+   venv\Scripts\activate          (Windows)
+   source venv/bin/activate       (Mac/Linux)
+```
 3. Install dependencies
+```
+   pip install -r requirements.txt
+```
 4. Run the app
-
-python app.py
+```
+   python app.py
+```
 5. Open `http://127.0.0.1:5000` in your browser
 
 ## ⚠️ Limitations
@@ -57,21 +86,8 @@ python app.py
 ## 📚 Academic Context
 
 Developed as an NLP mini-project for BTech IT.
-One Important Thing Before You Push to GitHub
-
-Create a requirements.txt file in your project folder so others can install the libraries. Run this in your terminal (with (venv) active):
-
-pip freeze > requirements.txt
-
-Also create a file named .gitignore with this content, so you don’t upload unnecessary files:
-
-venv/
-uploads/
-__pycache__/
-*.pyc
 
 
 
-screenshots:-
 
 
