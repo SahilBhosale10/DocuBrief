@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>DocuBrief - Document Summarizer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- =========================================
+             HEADER
+             ========================================= -->
+
+        <div class="header">
+
+            <div class="logo">
+                📄
+            </div>
+
+            <h1>
+                DocuBrief
+            </h1>
+
+            <p class="subtitle">
+                Turn long documents into short, clear summaries
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             FILE UPLOAD
+             ========================================= -->
+
+        <label
+            for="pdfInput"
+            class="upload-box"
+            id="dropArea"
+        >
+
+            <input
+                type="file"
+                id="pdfInput"
+                name="pdf_file"
+                accept=".pdf,.docx,.txt"
+                hidden
+            >
+
+
+            <div class="upload-icon">
+                ⬆
+            </div>
+
+
+            <div id="uploadLabel">
+
+                Click to choose a PDF, DOCX, or TXT file,
+                or drag and drop it here
+
+            </div>
+
+
+            <div
+                id="fileName"
+                class="file-name"
+            ></div>
+
+        </label>
+
+
+        <!-- =========================================
+             SUMMARY LENGTH
+             ========================================= -->
+
+        <div class="summary-length">
+
+            <label for="summaryLength">
+
+                Summary Length:
+
+            </label>
+
+
+            <select id="summaryLength">
+
+                <option value="small">
+                    Small
+                </option>
+
+
+                <option
+                    value="medium"
+                    selected
+                >
+                    Medium
+                </option>
+
+
+                <option value="large">
+                    Large
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- =========================================
+             SUMMARIZE BUTTON
+             ========================================= -->
+
+        <button
+            id="summarizeBtn"
+            disabled
+        >
+
+            Summarize
+
+        </button>
+
+
+        <!-- =========================================
+             LOADING
+             ========================================= -->
+
+        <div
+            id="loader"
+            class="loader hidden"
+        >
+
+            <div class="spinner">
+            </div>
+
+
+            <span>
+
+                Reading and summarizing your document...
+
+            </span>
+
+        </div>
+
+
+        <!-- =========================================
+             STATUS MESSAGE
+             ========================================= -->
+
+        <p id="statusMessage">
+        </p>
+
+
+        <!-- =========================================
+             RESULT
+             ========================================= -->
+
+        <div
+            id="resultBox"
+            class="result-box hidden"
+        >
+
+            <h2>
+                Summary
+            </h2>
+
+
+            <!-- =====================================
+                 SUMMARY TEXT
+                 ===================================== -->
+
+            <p id="summaryText">
+            </p>
+
+
+            <!-- =====================================
+                 STATISTICS
+                 ===================================== -->
+
+            <div class="stats">
+
+                <span id="wordStats">
+                </span>
+
+            </div>
+
+
+            <!-- =====================================
+                 TRANSLATION
+                 ===================================== -->
+
+            <div
+                id="translationSection"
+                class="translation-section"
+            >
+
+                <h3>
+                    Translate Summary
+                </h3>
+
+
+                <label for="languageSelect">
+
+                    Choose Language:
+
+                </label>
+
+
+                <select id="languageSelect">
+
+                    <option value="">
+                        Select Language
+                    </option>
+
+
+                    <option value="en">
+                        English
+                    </option>
+
+
+                    <option value="hi">
+                        Hindi
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="translateBtn"
+                    type="button"
+                >
+
+                    Translate
+
+                </button>
+
+
+                <!-- =================================
+                     TRANSLATED RESULT
+                     ================================= -->
+
+                <div
+                    id="translatedResult"
+                    class="translated-result"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+
+</html>
