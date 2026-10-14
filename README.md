@@ -17,17 +17,16 @@ get the key points in seconds.
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](Screenshots/home.png)
 
 ### Choose Summary Length & Language
-![Options](screenshots/options.png)
+![Options](Screenshots/options.png)
 
 ### Summary with Highlighted Keywords
-![Summary](screenshots/summary.png)
+![Summary](Screenshots/summary.png)
 
 ### Translated Summary
-![Translation](screenshots/translation.png)
-
+![Translation](Screenshots/translation.png)
 ## 🛠️ Tech Stack
 
 | Purpose | Technology |
